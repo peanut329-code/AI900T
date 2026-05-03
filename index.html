@@ -448,6 +448,42 @@ body {
 }
 .option-item.correct .option-letter { background: var(--green); }
 .option-item.wrong .option-letter { background: var(--red); }
+.option-item.partial { background: var(--yellow-light); border-color: #b7770d; }
+.option-item.partial .option-letter { background: #b7770d; }
+
+/* Multi-select checkbox style */
+.option-checkbox {
+  width: 22px; height: 22px;
+  border: 3px solid var(--dark);
+  border-radius: 5px;
+  background: white;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: 1px;
+  transition: background 0.15s;
+}
+.option-item.selected .option-checkbox { background: var(--blue); border-color: var(--blue); color: white; }
+.option-item.correct .option-checkbox { background: var(--green); border-color: var(--green); color: white; }
+.option-item.wrong .option-checkbox { background: var(--red); border-color: var(--red); color: white; }
+
+/* Multi hint badge */
+.multi-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--purple);
+  color: white;
+  border: var(--border);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+}
 
 /* Yes/No questions */
 .yesno-table {
@@ -1137,8 +1173,14 @@ function renderQuestion() {
   currentAnswered = false;
   yesnoAnswers = {};
 
+  // Remove multi-hint if exists
+  const oldHint = document.getElementById('multi-hint');
+  if (oldHint) oldHint.remove();
+
   if (q.type === 'yesno') {
     renderYesNo(q);
+  } else if (q.type === 'multi') {
+    renderMulti(q);
   } else {
     renderSingle(q);
   }
@@ -1155,7 +1197,6 @@ function renderSingle(q) {
     const li = document.createElement('li');
     li.className = 'option-item';
     li.dataset.idx = i;
-    // Remove leading letter if present (e.g., "A. text")
     const optText = opt.replace(/^[A-E]\.\s*/,'');
     li.innerHTML = `<span class="option-letter">${letters[i]}</span><span>${optText}</span>`;
     li.onclick = () => selectOption(li, i, q);
@@ -1165,10 +1206,49 @@ function renderSingle(q) {
 
 function selectOption(li, idx, q) {
   if (currentAnswered) return;
-  // Remove previous selection
   document.querySelectorAll('.option-item').forEach(el => el.classList.remove('selected'));
   li.classList.add('selected');
   document.getElementById('submit-btn').style.display = 'inline-block';
+}
+
+function renderMulti(q) {
+  document.getElementById('options-list').style.display = 'flex';
+  document.getElementById('yesno-table').style.display = 'none';
+
+  // Insert multi-hint badge before options list
+  const correctCount = (q.correctAnswers || []).length;
+  const hint = document.createElement('div');
+  hint.id = 'multi-hint';
+  hint.className = 'multi-hint';
+  hint.innerHTML = `☑ 複選題：請選 <strong style="font-size:17px;margin:0 3px;">${correctCount}</strong> 個答案`;
+  const optionsList = document.getElementById('options-list');
+  optionsList.parentNode.insertBefore(hint, optionsList);
+
+  const list = optionsList;
+  list.innerHTML = '';
+  const letters = ['A','B','C','D','E'];
+  (q.options || []).forEach((opt, i) => {
+    const li = document.createElement('li');
+    li.className = 'option-item';
+    li.dataset.idx = i;
+    li.dataset.letter = letters[i];
+    const optText = opt.replace(/^[A-E]\.\s*/,'');
+    li.innerHTML = `<span class="option-checkbox"></span><span class="option-letter">${letters[i]}</span><span>${optText}</span>`;
+    li.onclick = () => selectMultiOption(li, correctCount);
+    list.appendChild(li);
+  });
+}
+
+function selectMultiOption(li, correctCount) {
+  if (currentAnswered) return;
+  li.classList.toggle('selected');
+  // Update checkbox visual
+  const cb = li.querySelector('.option-checkbox');
+  cb.textContent = li.classList.contains('selected') ? '✓' : '';
+
+  const selectedCount = document.querySelectorAll('.option-item.selected').length;
+  document.getElementById('submit-btn').style.display =
+    selectedCount > 0 ? 'inline-block' : 'none';
 }
 
 window.submitAnswer = function() {
@@ -1176,10 +1256,40 @@ window.submitAnswer = function() {
   const q = quizQuestions[currentQIdx];
   if (q.type === 'yesno') {
     submitYesNo(q);
+  } else if (q.type === 'multi') {
+    submitMulti(q);
   } else {
     submitSingle(q);
   }
 };
+
+function submitMulti(q) {
+  const selectedItems = document.querySelectorAll('.option-item.selected');
+  if (!selectedItems.length) { showToast('請至少選擇一個答案！'); return; }
+
+  currentAnswered = true;
+  const correctLetters = new Set(q.correctAnswers || []);
+  const selectedLetters = new Set([...selectedItems].map(el => el.dataset.letter));
+  const isCorrect = correctLetters.size === selectedLetters.size &&
+    [...correctLetters].every(l => selectedLetters.has(l));
+
+  document.querySelectorAll('.option-item').forEach(el => {
+    el.classList.add('disabled');
+    const letter = el.dataset.letter;
+    const isInCorrect = correctLetters.has(letter);
+    const isSelected = selectedLetters.has(letter);
+    if (isInCorrect) {
+      el.classList.add('correct');
+      el.querySelector('.option-checkbox').textContent = '✓';
+    } else if (isSelected && !isInCorrect) {
+      el.classList.add('wrong');
+      el.querySelector('.option-checkbox').textContent = '✗';
+    }
+  });
+
+  recordAnswer(q, isCorrect);
+  showAnswerReveal(q, isCorrect);
+}
 
 function submitSingle(q) {
   const selected = document.querySelector('.option-item.selected');
