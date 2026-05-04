@@ -1243,19 +1243,22 @@ const QUESTIONS_DATA = [
   {
     "id": 70,
     "category": "outline-4",
-    "type": "single",
-    "question": "哪三項功能是 Azure AI 語音服務的元素？",
+    "type": "multi",
+    "question": "哪三項功能是 Azure AI 語音服務的元素？(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "A. 問答系統 (Question Answering)",
-      "B. Token 化 (Tokenization)",
-      "C. 語言識別、人聲辨識 (Speaker Recognition)、語音助理、語音轉文字",
-      "D. 關鍵片語擷取 (Key Phrase Extraction)"
+      "A. 語音轉換文字 (Speech-to-Text)",
+      "B. 情感分析 (Sentiment Analysis)",
+      "C. 文字轉換語音 (Text-to-Speech)",
+      "D. 光學字元辨識 (OCR)",
+      "E. 語音翻譯 (Speech Translation)",
+      "F. 臉部辨識 (Face Recognition)"
     ],
     "subQuestions": null,
-    "answer": "C. 語言識別、人聲辨識 (Speaker Recognition)、語音助理、語音轉文字",
-    "rationale": "Azure AI 語音服務 提供：1) 語音轉文字 (STT) - 即時轉錄 2) 文字轉語音 (TTS) - 合成語音 3) 語音翻譯 4) 說話者辨識 - 識別說話人身份。STT 已針對對話和聽寫場景優化。",
-    "examTip": "「語音→文字」、「文字→語音」、「即時字幕」、「說話者識別」都是語音服務功能。",
-    "source": 1
+    "answer": "語音轉換文字 (Speech-to-Text)、文字轉換語音 (Text-to-Speech)、語音翻譯 (Speech Translation)",
+    "rationale": "Azure AI 語音服務 提供：1) 語音轉文字 (STT) - 即時轉錄 2) 文字轉語音 (TTS) - 合成語音 3) 語音翻譯 4) 說話者辨識 - 識別說話人身份。STT 已針對對話和聽寫場景優化。情感分析屬於 Azure AI 語言服務，OCR 屬於電腦視覺，臉部辨識屬於臉部服務。",
+    "examTip": "「語音→文字」、「文字→語音」、「語音翻譯」都是語音服務核心功能。注意：情感分析、OCR、臉部辨識不屬於語音服務。",
+    "source": 1,
+    "correctAnswers": ["A", "C", "E"]
   },
   {
     "id": 71,
@@ -1464,19 +1467,22 @@ const QUESTIONS_DATA = [
   {
     "id": 82,
     "category": "outline-5",
-    "type": "single",
-    "question": "哪三項功能是生成 AI 模型的影像產生功能的範例？",
+    "type": "multi",
+    "question": "哪三項功能是生成 AI 模型的影像產生功能的範例？(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "A. 基礎模型 (Foundation Model)",
-      "B. Copilot (副駕駛員)",
-      "C. 微調 (Fine-tuning)",
-      "D. 建立影像的變化、編輯影像、建立新影像"
+      "A. 建立影像的變化 (Create image variations)",
+      "B. 微調 (Fine-tuning)",
+      "C. 編輯影像 (Edit images)",
+      "D. 基礎模型 (Foundation Model)",
+      "E. 建立新影像 (Create new images)",
+      "F. 知識採礦 (Knowledge Mining)"
     ],
     "subQuestions": null,
-    "answer": "D. 建立影像的變化、編輯影像、建立新影像",
-    "rationale": "此題考察生成式 AI 功能。",
-    "examTip": "GPT=文字生成、DALL-E=影像生成、Embeddings=向量化。系統訊息設定規則。",
-    "source": 1
+    "answer": "建立影像的變化 (Create image variations)、編輯影像 (Edit images)、建立新影像 (Create new images)",
+    "rationale": "生成 AI 模型 (如 DALL-E) 的影像產生功能包含三項核心能力：1) 建立新影像：根據文字描述從頭創建影像。2) 編輯影像：修改現有影像的特定部分。3) 建立影像的變化：生成現有影像的不同版本。微調是模型訓練技術，基礎模型是模型類型，知識採礦是搜尋技術，均不屬於影像產生功能範例。",
+    "examTip": "GPT=文字生成、DALL-E=影像生成（建立/編輯/變化）。Embeddings=向量化。系統訊息設定規則。",
+    "source": 1,
+    "correctAnswers": ["A", "C", "E"]
   },
   {
     "id": 83,
@@ -1794,19 +1800,20 @@ const QUESTIONS_DATA = [
   {
     "id": 100,
     "category": "outline-4",
-    "type": "single",
-    "question": "您可以在下列哪兩種情況中使用語音合成解決方案？每個正確答案都呈現一個完整的解決方案。",
+    "type": "multi",
+    "question": "您可以在下列哪兩種情況中使用語音合成解決方案？每個正確答案都呈現一個完整的解決方案。(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 使用電話鍵盤將信用卡號碼輸入到電話時，可以朗讀輸入號碼的自動語音。",
-      "2. 可以用語音與玩家交談的電腦遊戲 AI 角色。",
-      "3. 為新聞廣播產生即時字幕。",
-      "4. 從會議錄音中擷取關鍵片語。"
+      "A. 使用電話鍵盤將信用卡號碼輸入到電話時，可以朗讀輸入號碼的自動語音。",
+      "B. 為新聞廣播產生即時字幕。",
+      "C. 可以用語音與玩家交談的電腦遊戲 AI 角色。",
+      "D. 從會議錄音中擷取關鍵片語。"
     ],
     "subQuestions": null,
-    "answer": "1, 2",
-    "rationale": "語音合成 (Speech Synthesis) 也稱為文字轉換語音 (Text-to-Speech)，是將文字資料轉換為語音。 1 & 2: 都是將文字（號碼、台詞）轉換成語音。 3: 產生字幕是將語音轉成文字 (Speech-to-Text)。 4: 擷取關鍵片語是自然語言處理。",
+    "answer": "使用電話鍵盤將信用卡號碼輸入到電話時，可以朗讀輸入號碼的自動語音、可以用語音與玩家交談的電腦遊戲 AI 角色",
+    "rationale": "語音合成 (Speech Synthesis) 也稱為文字轉換語音 (Text-to-Speech)，是將文字資料轉換為語音。A: 將號碼轉換成語音朗讀，是語音合成。C: 電腦遊戲 AI 角色用語音回應玩家，是語音合成。B: 產生字幕是將語音轉成文字 (Speech-to-Text)，方向相反。D: 擷取關鍵片語是自然語言處理。",
     "examTip": "記住方向性：文字 -> 語音 是「語音合成」；語音 -> 文字 是「語音辨識」。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 101,
@@ -1887,20 +1894,21 @@ const QUESTIONS_DATA = [
   {
     "id": 105,
     "category": "outline-4",
-    "type": "single",
-    "question": "您需要為商務聊天機器人提供內容，以協助其為使用者解答簡單的查詢。下列哪三種方式是使用語言服務的問題解答來建立問與答文字？",
+    "type": "multi",
+    "question": "您需要為商務聊天機器人提供內容，以協助其為使用者解答簡單的查詢。下列哪三種方式是使用語言服務的問題解答來建立問與答文字？(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 從預先定義的資料來源匯入閒聊內容。",
-      "2. 手動輸入問題與答案。",
-      "3. 將機器人連線到 Cortana 頻道，並們用 Cortana 提問。",
-      "4. 從現有的網頁產生問題與答案。",
-      "5. 使用 Azure Machine Learning 自動化 ML，根據包含問題與答案組的檔案來定型模型。"
+      "A. 從預先定義的資料來源匯入閒聊內容。",
+      "B. 手動輸入問題與答案。",
+      "C. 將機器人連線到 Cortana 頻道，並用 Cortana 提問。",
+      "D. 從現有的網頁產生問題與答案。",
+      "E. 使用 Azure Machine Learning 自動化 ML，根據包含問題與答案組的檔案來定型模型。"
     ],
     "subQuestions": null,
-    "answer": "1, 2, 4",
-    "rationale": "Azure AI 語言服務的問題解答功能 (前身為 QnA Maker) 建立知識庫主要有三種方式： 從現有資料來源匯入：例如 FAQ 網頁、PDF、Word 文件。選項 4 符合。 手動編輯：直接在入口網站中新增或編輯問答配對。選項 2 符合。 匯入閒聊內容：服務提供預設的閒聊集（如專業、友善風格）來讓機器人更具人性化。選項 1 符合。 Cortana 是使用者通道，不是內容來源。AutoML 用於訓練複雜的機器學習模型，不是用來建立問答知識庫。",
+    "answer": "從預先定義的資料來源匯入閒聊內容、手動輸入問題與答案、從現有的網頁產生問題與答案",
+    "rationale": "Azure AI 語言服務的問題解答功能 (前身為 QnA Maker) 建立知識庫主要有三種方式：A. 匯入閒聊內容：服務提供預設的閒聊集（如專業、友善風格）來讓機器人更具人性化。B. 手動編輯：直接在入口網站中新增或編輯問答配對。D. 從現有資料來源匯入：例如 FAQ 網頁、PDF、Word 文件。C: Cortana 是使用者通道，不是內容來源。E: AutoML 用於訓練複雜的機器學習模型，不是用來建立問答知識庫。",
     "examTip": "記住建立知識庫的三大來源：URL/檔案、手動輸入、內建閒聊。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "B", "D"]
   },
   {
     "id": 106,
@@ -2005,37 +2013,39 @@ const QUESTIONS_DATA = [
   {
     "id": 111,
     "category": "outline-4",
-    "type": "single",
-    "question": "您可以使用 Azure OpenAI 生成式 AI 應用程式產生哪兩種類型的內容？每個正確答案都呈現一個完整的解決方案。",
+    "type": "multi",
+    "question": "您可以使用 Azure OpenAI 生成式 AI 應用程式產生哪兩種類型的內容？每個正確答案都呈現一個完整的解決方案。(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 影片",
-      "2. 影像",
-      "3. 文字",
-      "4. 音訊"
+      "A. 影像",
+      "B. 影片",
+      "C. 文字",
+      "D. 音訊"
     ],
     "subQuestions": null,
-    "answer": "2, 3",
-    "rationale": "Azure OpenAI 服務目前主要提供用於生成以下內容的模型： 文字：使用 GPT-4、GPT-3.5 等模型可以生成文章、程式碼、摘要、對話等。 影像：使用 DALL-E 模型可以根據文字描述生成新的影像。 目前，Azure OpenAI 服務不直接提供生成影片或音訊的模型。",
+    "answer": "影像、文字",
+    "rationale": "Azure OpenAI 服務目前主要提供用於生成以下內容的模型：文字：使用 GPT-4、GPT-3.5 等模型可以生成文章、程式碼、摘要、對話等。影像：使用 DALL-E 模型可以根據文字描述生成新的影像。目前，Azure OpenAI 服務不直接提供生成影片或音訊的模型。",
     "examTip": "Azure OpenAI = GPT (文字/程式碼) + DALL-E (影像)。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 112,
     "category": "outline-4",
-    "type": "single",
-    "question": "轉換器模型中的三個階段是什麼？每個正確答案都呈現一個完整的解決方案。",
+    "type": "multi",
+    "question": "轉換器模型中的三個階段是什麼？每個正確答案都呈現一個完整的解決方案。(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 物件偵測",
-      "2. 下一個 Token 預測",
-      "3. Token 化",
-      "4. 內嵌計算",
-      "5. 匿名化"
+      "A. Token 化 (Tokenization)",
+      "B. 物件偵測 (Object Detection)",
+      "C. 內嵌計算 (Embedding)",
+      "D. 匿名化 (Anonymization)",
+      "E. 下一個 Token 預測 (Next Token Prediction)"
     ],
     "subQuestions": null,
-    "answer": "2, 3, 4",
-    "rationale": "大型語言模型（如基於轉換器架構的 GPT）處理文字的流程大致如下： 1. Token 化 (Tokenization)：將輸入的文字分解成更小的單元（Token），如單詞或子詞。 2. 內嵌計算 (Embedding)：將每個 Token 轉換為一個數值向量，這個向量代表了該 Token 的語意。 3. 下一個 Token 預測 (Next Token Prediction)：模型的核心任務，根據前面的 Tokens 序列，預測最有可能出現的下一個 Token，並依此生成回應。 物件偵測是電腦視覺任務，匿名化是資料前處理步驟，但不是模型核心階段。",
+    "answer": "Token 化 (Tokenization)、內嵌計算 (Embedding)、下一個 Token 預測 (Next Token Prediction)",
+    "rationale": "大型語言模型（如基於轉換器架構的 GPT）處理文字的流程大致如下：1. Token 化 (Tokenization)：將輸入的文字分解成更小的單元（Token），如單詞或子詞。2. 內嵌計算 (Embedding)：將每個 Token 轉換為一個數值向量，這個向量代表了該 Token 的語意。3. 下一個 Token 預測 (Next Token Prediction)：模型的核心任務，根據前面的 Tokens 序列，預測最有可能出現的下一個 Token，並依此生成回應。物件偵測是電腦視覺任務，匿名化是資料前處理步驟，但不是模型核心階段。",
     "examTip": "記住LLM生成文字的流程：文字 -> 碎塊(Token) -> 數字向量(Embedding) -> 預測下一個 -> 組合回文字。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C", "E"]
   },
   {
     "id": 113,
@@ -2156,7 +2166,7 @@ const QUESTIONS_DATA = [
     "subQuestions": [
       {
         "text": "1. 您可以使用自己的資料微調 Azure OpenAI 模型。",
-        "answer": "否"
+        "answer": "是"
       },
       {
         "text": "2. 預先訓練的生成式 AI 模型是 Azure OpenAI 的元件。",
@@ -2167,9 +2177,9 @@ const QUESTIONS_DATA = [
         "answer": "否"
       }
     ],
-    "answer": "答案 (根據題目來源)：1. 否2. 是3. 否(注意：第一題的答案可能與現況不符，請參考解析)",
-    "rationale": "1. 根據題目提供的答案為「否」，但在實際情況中，Azure OpenAI 是支援使用自己的資料進行微調 (Fine-tuning) 的。這可能是一道舊題目或有爭議的題目。在考試中，如果遇到，需要根據當時的知識和題庫趨勢判斷。然而，從技術角度看，這個敘述是正確的。 2. 是的。Azure OpenAI 的核心就是提供強大的預先訓練模型（如 GPT-4, DALL-E）作為服務。 3. 否。Microsoft 提倡使用其經過負責任 AI 準則審核和調整的預訓練模型，使用者可以在此基礎上建置應用，而無需從頭訓練自己的模型。",
-    "examTip": "注意題庫的時效性。第一題在現實中是「是」，但如果題庫答案是「否」，可能需要按題庫答案作答，同時理解其背後的技術事實。",
+    "answer": "1. 是2. 是3. 否",
+    "rationale": "1. 是。Azure OpenAI 服務支援使用自己的資料對基礎模型進行微調 (Fine-tuning)，以使其更適應特定領域或任務。這是 Azure OpenAI 的核心功能之一。 2. 是。Azure OpenAI 的核心就是提供強大的預先訓練模型（如 GPT-4, DALL-E）作為服務，這些預訓練生成式 AI 模型是服務的基礎元件。 3. 否。Microsoft 負責任 AI 準則適用於所有 AI 應用，使用預先訓練的模型並不意味著不符合負責任 AI 準則，開發人員可在現有模型基礎上建置應用並同時遵循準則，無需從頭訓練自己的模型。",
+    "examTip": "Azure OpenAI 支援微調 (Fine-tuning)，這是其核心功能。負責任 AI 準則可以透過使用預建模型並搭配適當的內容過濾和監控來實現，不必自己訓練模型。",
     "source": 2
   },
   {
@@ -2192,37 +2202,39 @@ const QUESTIONS_DATA = [
   {
     "id": 121,
     "category": "outline-3",
-    "type": "single",
-    "question": "您可以使用 Azure OpenAI DALL-E 模型執行下列兩個動作？每個正確答案都呈現一個完整的解決方案。",
+    "type": "multi",
+    "question": "您可以使用 Azure OpenAI DALL-E 模型執行下列兩個動作？每個正確答案都呈現一個完整的解決方案。(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 產生影像標題。",
-      "2. 修改影像。",
-      "3. 建立影像。",
-      "4. 偵測影像中的物件。",
-      "5. 使用光學字元辨識 (OCR)。"
+      "A. 修改影像。",
+      "B. 產生影像標題。",
+      "C. 建立影像。",
+      "D. 偵測影像中的物件。",
+      "E. 使用光學字元辨識 (OCR)。"
     ],
     "subQuestions": null,
-    "answer": "2, 3",
-    "rationale": "DALL-E 模型主要有兩大功能： 建立影像 (Image Generation)：根據文字提示從頭開始創建新影像。 修改影像 (Image Editing/Inpainting/Outpainting)：根據提示編輯現有影像的特定區域。 產生影像標題是 Azure AI 視覺的「影像描述」功能。物件偵測和 OCR 也是 Azure AI 視覺的功能，不是 DALL-E 的。",
+    "answer": "修改影像、建立影像",
+    "rationale": "DALL-E 模型主要有兩大功能：A. 修改影像 (Image Editing/Inpainting/Outpainting)：根據提示編輯現有影像的特定區域。C. 建立影像 (Image Generation)：根據文字提示從頭開始創建新影像。B: 產生影像標題是 Azure AI 視覺的「影像描述」功能。D: 物件偵測和 E: OCR 也是 Azure AI 視覺的功能，不是 DALL-E 的。",
     "examTip": "DALL-E 不僅能「無中生有」，還能「錦上添花」或「改頭換面」（修改影像）。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 122,
     "category": "outline-4",
-    "type": "single",
-    "question": "您可以使用下列哪兩項工具來呼叫 Azure OpenAI 服務？每個正確答案都呈現一個完整的解決方案。",
+    "type": "multi",
+    "question": "您可以使用下列哪兩項工具來呼叫 Azure OpenAI 服務？每個正確答案都呈現一個完整的解決方案。(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 適用於 Python 的 Azure SDK",
-      "2. 適用於 JavaScript 的 Azure SDK",
-      "3. Azure REST API",
-      "4. Azure 命令列介面 (CLI)"
+      "A. 適用於 Python 的 Azure SDK",
+      "B. Azure 命令列介面 (CLI)",
+      "C. Azure REST API",
+      "D. 適用於 JavaScript 的 Azure SDK"
     ],
     "subQuestions": null,
-    "answer": "1, 3",
-    "rationale": "與 Azure OpenAI 服務互動的主要程式設計方式有： REST API：這是最底層、最通用的方式，任何可以發送 HTTP 請求的語言都可以使用。 SDK (軟體開發套件)：Azure 為多種語言提供了 SDK 來簡化 API 的呼叫，其中 Python 和 .NET 是最主要支援的。 雖然 Azure CLI 可以用來管理 Azure OpenAI *資源*（如建立、刪除部署），但它不直接用於發送提示以*呼叫模型*進行推斷。JavaScript SDK 的支援可能不如 Python 完整或處於預覽階段。最標準的答案是 REST API 和 Python SDK。",
+    "answer": "適用於 Python 的 Azure SDK、Azure REST API",
+    "rationale": "與 Azure OpenAI 服務互動的主要程式設計方式有：A. SDK：Azure 為多種語言提供了 SDK 來簡化 API 的呼叫，其中 Python 是最主要支援的。C. REST API：這是最底層、最通用的方式，任何可以發送 HTTP 請求的語言都可以使用。B: 雖然 Azure CLI 可以用來管理 Azure OpenAI 資源（如建立、刪除部署），但它不直接用於發送提示以呼叫模型進行推斷。D: JavaScript SDK 支援存在但不是最主要的標準答案。最標準的答案是 REST API 和 Python SDK。",
     "examTip": "呼叫 Azure 服務的標準方法永遠包括 REST API 和主要的 SDK (特別是 Python)。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 123,
@@ -2269,36 +2281,38 @@ const QUESTIONS_DATA = [
   {
     "id": 125,
     "category": "outline-1",
-    "type": "single",
-    "question": "您有一個使用 Azure OpenAI GPT-3.5 大型語言模型 (LLM) 回答技術性問題的聊天機器人。下列哪兩個敘述正確描述了該聊天機器人？每個正確答案都呈現一個完整的解決方案。",
+    "type": "multi",
+    "question": "您有一個使用 Azure OpenAI GPT-3.5 大型語言模型 (LLM) 回答技術性問題的聊天機器人。下列哪兩個敘述正確描述了該聊天機器人？每個正確答案都呈現一個完整的解決方案。(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 該聊天機器人將一律提供準確的資料。",
-      "2. 該聊天機器人可能會使用不準確的資料回應。",
-      "3. 基礎知識資料可用來限制聊天機器人的輸出。",
-      "4. 該聊天機器人適合用來執行醫療診斷。"
+      "A. 該聊天機器人可能會使用不準確的資料回應。",
+      "B. 該聊天機器人將一律提供準確的資料。",
+      "C. 基礎知識資料可用來限制聊天機器人的輸出。",
+      "D. 該聊天機器人適合用來執行醫療診斷。"
     ],
     "subQuestions": null,
-    "answer": "2, 3",
-    "rationale": "2. 正確。大型語言模型可能會產生「幻覺」(Hallucination)，即編造看似合理但不正確的資訊。這是 LLM 的一個固有風險，屬於可靠性的考量。 3. 正確。透過基礎知識 (Grounding) 或檢索增強生成 (RAG) 技術，可以將模型的回應限制在您提供的特定資料範圍內，從而提高準確性並減少幻覺。 1. 錯誤。由於幻覺的可能性，不能保證 LLM 一律準確。 4. 錯誤。由於可靠性和準確性的問題，將 LLM 直接用於高風險領域（如醫療診斷）是不負責任的，違反了可靠性與安全性以及權責的 AI 原則。",
+    "answer": "該聊天機器人可能會使用不準確的資料回應、基礎知識資料可用來限制聊天機器人的輸出",
+    "rationale": "A. 正確。大型語言模型可能會產生「幻覺」(Hallucination)，即編造看似合理但不正確的資訊。這是 LLM 的一個固有風險，屬於可靠性的考量。C. 正確。透過基礎知識 (Grounding) 或檢索增強生成 (RAG) 技術，可以將模型的回應限制在您提供的特定資料範圍內，從而提高準確性並減少幻覺。B. 錯誤。由於幻覺的可能性，不能保證 LLM 一律準確。D. 錯誤。由於可靠性和準確性的問題，將 LLM 直接用於高風險領域（如醫療診斷）是不負責任的。",
     "examTip": "負責任 AI 的一個重要考點是 LLM 可能會出錯（產生幻覺），以及如何透過「提供您自己的資料」(Grounding) 來緩解這個問題。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 126,
     "category": "outline-4",
-    "type": "single",
-    "question": "您可以使用哪兩個資源來分析程式碼並產生程式碼函式的說明和程式碼註解？",
+    "type": "multi",
+    "question": "您可以使用哪兩個資源來分析程式碼並產生程式碼函式的說明和程式碼註解？(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. Azure OpenAI Whisper 模型",
-      "2. Azure OpenAI DALL-E 模型",
-      "3. Azure OpenAI GPT-4 模型",
-      "4. GitHub Copilot 服務"
+      "A. Azure OpenAI GPT-4 模型",
+      "B. Azure OpenAI Whisper 模型",
+      "C. GitHub Copilot 服務",
+      "D. Azure OpenAI DALL-E 模型"
     ],
     "subQuestions": null,
-    "answer": "3, 4",
-    "rationale": "分析程式碼並生成說明/註解是程式碼理解和生成的任務。 Azure OpenAI GPT-4 模型：具有強大的程式碼處理能力，可以直接透過提示來完成這類任務。 GitHub Copilot 服務：這是一個專為程式開發設計的產品，其核心功能之一就是解釋和註解程式碼，它底層就是由 GPT 模型驅動的。 Whisper 用於語音，DALL-E 用於影像。",
+    "answer": "Azure OpenAI GPT-4 模型、GitHub Copilot 服務",
+    "rationale": "分析程式碼並生成說明/註解是程式碼理解和生成的任務。Azure OpenAI GPT-4 模型：具有強大的程式碼處理能力，可以直接透過提示來完成這類任務。GitHub Copilot 服務：這是一個專為程式開發設計的產品，其核心功能之一就是解釋和註解程式碼，它底層就是由 GPT 模型驅動的。Whisper 用於語音轉文字，DALL-E 用於影像生成，兩者不適合程式碼分析任務。",
     "examTip": "處理程式碼的任務，答案通常是 GPT 模型或基於它的產品 (GitHub Copilot)。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 127,
@@ -2354,19 +2368,20 @@ const QUESTIONS_DATA = [
   {
     "id": 130,
     "category": "outline-1",
-    "type": "single",
-    "question": "您正在建置 AI 應用程式。您需要確保應用程式使用負責任 AI 的準則。請問您應該遵循下列哪兩個準則？",
+    "type": "multi",
+    "question": "您正在建置 AI 應用程式。您需要確保應用程式使用負責任 AI 的準則。請問您應該遵循下列哪兩個準則？(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 實作敏捷式軟體開發 (Agile Software Development) 方法",
-      "2. 建立風險治理委員會，包括合法小組的成員、風險治理小組的成員、以及隱私保護專家。",
-      "3. 防止洩漏使用 AI 演算法自動做出決策。",
-      "4. 實作 AI 模型驗證的程序，做為軟體檢閱程序的一部分。"
+      "A. 建立風險治理委員會，包括合法小組的成員、風險治理小組的成員、以及隱私保護專家。",
+      "B. 實作敏捷式軟體開發 (Agile Software Development) 方法",
+      "C. 實作 AI 模型驗證的程序，做為軟體檢閱程序的一部分。",
+      "D. 防止洩漏使用 AI 演算法自動做出決策。"
     ],
     "subQuestions": null,
-    "answer": "2, 4",
-    "rationale": "實踐負責任 AI (Responsible AI) 涉及流程和治理： 2. 建立跨職能的治理委員會是權責 (Accountability) 原則的體現，確保決策過程中有來自不同領域的專家監督。 4. 將模型驗證納入開發流程是可靠性與安全性 (Reliability and Safety) 原則的體現，確保模型在部署前的品質和穩定性。 敏捷開發是軟體工程方法，不直接等同於 RAI。選項3的說法太絕對，「防止洩漏」應是「揭露」或「透明化」，且完全禁止自動決策並非 RAI 的要求，而是要求決策過程可解釋、公平。",
+    "answer": "建立風險治理委員會，包括合法小組的成員、風險治理小組的成員、以及隱私保護專家、實作 AI 模型驗證的程序，做為軟體檢閱程序的一部分",
+    "rationale": "實踐負責任 AI (Responsible AI) 涉及流程和治理：A. 建立跨職能的治理委員會是權責 (Accountability) 原則的體現，確保決策過程中有來自不同領域的專家監督。C. 將模型驗證納入開發流程是可靠性與安全性 (Reliability and Safety) 原則的體現，確保模型在部署前的品質和穩定性。B: 敏捷開發是軟體工程方法，不直接等同於 RAI。D: 完全禁止自動決策並非 RAI 的要求，RAI 要求的是決策過程可解釋、公平。",
     "examTip": "負責任 AI 不僅是技術問題，更是「流程」和「治理」問題。建立委員會、實施驗證流程都是其重要實踐。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 131,
@@ -2488,38 +2503,40 @@ const QUESTIONS_DATA = [
   {
     "id": 137,
     "category": "outline-1",
-    "type": "single",
-    "question": "Microsoft 責任 AI 的指導準則是哪三項？",
+    "type": "multi",
+    "question": "Microsoft 責任 AI 的指導準則是哪三項？(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 決斷性",
-      "2. 固執性",
-      "3. 知識性",
-      "4. 公平性",
-      "5. 包容性",
-      "6. 可靠性和安全性"
+      "A. 決斷性",
+      "B. 公平性 (Fairness)",
+      "C. 固執性",
+      "D. 包容性 (Inclusiveness)",
+      "E. 知識性",
+      "F. 可靠性和安全性 (Reliability and Safety)"
     ],
     "subQuestions": null,
-    "answer": "4, 5, 6",
-    "rationale": "Microsoft 定義了六項負責任 AI 的指導原則：公平性 (Fairness)、可靠性與安全性 (Reliability and Safety)、隱私權與安全性 (Privacy and Security)、包容性 (Inclusiveness)、透明度 (Transparency)，以及權責 (Accountability)。選項 4、5、6 都是這六大原則的一部分。",
+    "answer": "公平性 (Fairness)、包容性 (Inclusiveness)、可靠性和安全性 (Reliability and Safety)",
+    "rationale": "Microsoft 定義了六項負責任 AI 的指導原則：公平性 (Fairness)、可靠性與安全性 (Reliability and Safety)、隱私權與安全性 (Privacy and Security)、包容性 (Inclusiveness)、透明度 (Transparency)，以及權責 (Accountability)。B、D、F 都是這六大原則的一部分。決斷性、固執性、知識性均不是其原則。",
     "examTip": "務必記住這六大原則，它們是 AI-900 的高頻考點。可以用首字縮寫來幫助記憶。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["B", "D", "F"]
   },
   {
     "id": 138,
     "category": "outline-4",
-    "type": "single",
-    "question": "下列哪兩個案例是自然語言處理工作負載範例？每個正確答案都呈現一個完整的解決方案。",
+    "type": "multi",
+    "question": "下列哪兩個案例是自然語言處理工作負載範例？每個正確答案都呈現一個完整的解決方案。(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 監控機器溫度，以在溫度達到特定閾值時打開風扇。",
-      "2. 可以回答諸如「今天天氣如何？」等問題的家用智慧型裝置。",
-      "3. 自動將車前燈插入汽車的生產線機械。",
-      "4. 使用知識庫以互動方式回答使用者問題的網站。"
+      "A. 可以回答諸如「今天天氣如何？」等問題的家用智慧型裝置。",
+      "B. 監控機器溫度，以在溫度達到特定閾值時打開風扇。",
+      "C. 使用知識庫以互動方式回答使用者問題的網站。",
+      "D. 自動將車前燈插入汽車的生產線機械。"
     ],
     "subQuestions": null,
-    "answer": "2, 4",
-    "rationale": "NLP 處理的是人類語言。 2. 家用智慧型裝置需要理解使用者的口語問題（如「今天天氣如何？」），這是典型的 NLP (語音辨識 + 意圖理解) 應用。 4. 網站使用知識庫進行互動式問答，需要理解使用者輸入的文字問題，並從知識庫中找到匹配的答案，這也是 NLP (問題解答) 的應用。 選項 1 是基於規則的自動化或異常偵測。選項 3 是機器人流程自動化或電腦視覺引導的機械操作。",
+    "answer": "可以回答諸如「今天天氣如何？」等問題的家用智慧型裝置、使用知識庫以互動方式回答使用者問題的網站",
+    "rationale": "NLP 處理的是人類語言。A. 家用智慧型裝置需要理解使用者的口語問題（如「今天天氣如何？」），這是典型的 NLP (語音辨識 + 意圖理解) 應用。C. 網站使用知識庫進行互動式問答，需要理解使用者輸入的文字問題，並從知識庫中找到匹配的答案，這也是 NLP (問題解答) 的應用。B: 監控機器溫度是基於規則的自動化或異常偵測。D: 自動生產線機械是電腦視覺或機器人技術。",
     "examTip": "尋找與「對話」、「文字理解」、「語音命令」相關的場景，這些都是 NLP 的範疇。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 139,
@@ -2850,20 +2867,21 @@ const QUESTIONS_DATA = [
   {
     "id": 157,
     "category": "outline-2",
-    "type": "single",
-    "question": "您需要使用以下資料集來預測指定客戶的收入範圍，應該將下列哪兩個欄位用作特徵？[註：此題附有一張表格，包含「名字」、「姓氏」、「年齡」、「教育程度」、「收入範圍」等欄位及範例資料。]",
+    "type": "multi",
+    "question": "您需要使用以下資料集來預測指定客戶的收入範圍，應該將下列哪兩個欄位用作特徵？[註：此題附有一張表格，包含「名字」、「姓氏」、「年齡」、「教育程度」、「收入範圍」等欄位及範例資料。](每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 名字",
-      "2. 姓氏",
-      "3. 教育程度",
-      "4. 收入範圍",
-      "5. 年齡"
+      "A. 教育程度",
+      "B. 名字",
+      "C. 年齡",
+      "D. 收入範圍",
+      "E. 姓氏"
     ],
     "subQuestions": null,
-    "answer": "3, 5",
+    "answer": "教育程度、年齡",
     "rationale": "在機器學習中，特徵 (Feature) 是用來進行預測的輸入變數。而要預測的目標變數稱為標籤 (Label)。本題要預測的是「收入範圍」，所以「收入範圍」是標籤。而「教育程度」和「年齡」是用來預測收入的有用資訊，因此它們是特徵。名字和姓氏通常是識別碼，不具有預測能力。",
     "examTip": "Feature = 輸入/依據；Label = 輸出/目標。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 158,
@@ -2968,19 +2986,20 @@ const QUESTIONS_DATA = [
   {
     "id": 163,
     "category": "outline-2",
-    "type": "single",
-    "question": "您使用 Azure Machine Learning 設計工具發佈推斷管線。您應該使用下列哪兩個參數來存取 Web 服務？",
+    "type": "multi",
+    "question": "您使用 Azure Machine Learning 設計工具發佈推斷管線。您應該使用下列哪兩個參數來存取 Web 服務？(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 模型名稱",
-      "2. REST 端點",
-      "3. 驗證金鑰",
-      "4. 定型端點"
+      "A. REST 端點",
+      "B. 模型名稱",
+      "C. 驗證金鑰",
+      "D. 定型端點"
     ],
     "subQuestions": null,
-    "answer": "2, 3",
-    "rationale": "當您將一個模型部署為 Web 服務後，外部應用程式需要兩個關鍵資訊來呼叫它： REST 端點 (REST Endpoint)：這是 Web 服務的唯一 URL 位址。 驗證金鑰 (Authentication Key)：這是一個秘密金鑰，用於驗證呼叫者的身份，確保只有授權的應用程式可以使用該服務。",
+    "answer": "REST 端點、驗證金鑰",
+    "rationale": "當您將一個模型部署為 Web 服務後，外部應用程式需要兩個關鍵資訊來呼叫它：A. REST 端點 (REST Endpoint)：這是 Web 服務的唯一 URL 位址。C. 驗證金鑰 (Authentication Key)：這是一個秘密金鑰，用於驗證呼叫者的身份，確保只有授權的應用程式可以使用該服務。B: 模型名稱不是呼叫 Web 服務的必要參數。D: 定型端點用於訓練，非推斷呼叫。",
     "examTip": "呼叫已部署的 Web 服務 = 端點 (地址) + 金鑰 (鑰匙)。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 164,
@@ -3518,19 +3537,20 @@ const QUESTIONS_DATA = [
   {
     "id": 194,
     "category": "outline-3",
-    "type": "single",
-    "question": "使用 Azure AI 電腦視覺可執行下列哪兩項工作？每個正確答案都是一個完整的解決方案。",
+    "type": "multi",
+    "question": "使用 Azure AI 電腦視覺可執行下列哪兩項工作？每個正確答案都是一個完整的解決方案。(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 將影像中的文字翻譯為不同語言。",
-      "2. 辨識手寫文字。",
-      "3. 訓練自訂影像分類模型。",
-      "4. 偵測影像中臉部。"
+      "A. 辨識手寫文字。",
+      "B. 將影像中的文字翻譯為不同語言。",
+      "C. 偵測影像中臉部。",
+      "D. 訓練自訂影像分類模型。"
     ],
     "subQuestions": null,
-    "answer": "2, 4",
-    "rationale": "Azure AI 電腦視覺 (現為 Azure AI 視覺) 是一個通用的視覺服務，其功能包括： 2. 辨識手寫文字：這是其 OCR 功能的一部分。 4. 偵測影像中臉部：這是其影像分析功能的一部分，可以返回臉部的位置。 選項 1 是一個兩步驟的過程：先用電腦視覺的 OCR 讀取文字，再用翻譯工具服務翻譯文字，單靠電腦視覺無法完成。選項 3 訓練「自訂」模型是 Azure AI 自訂視覺服務的工作。",
+    "answer": "辨識手寫文字、偵測影像中臉部",
+    "rationale": "Azure AI 電腦視覺 (現為 Azure AI 視覺) 是一個通用的視覺服務，其功能包括：A. 辨識手寫文字：這是其 OCR 功能的一部分。C. 偵測影像中臉部：這是其影像分析功能的一部分，可以返回臉部的位置。B: 將文字翻譯為不同語言需要翻譯工具服務，單靠電腦視覺無法完成。D: 訓練「自訂」模型是 Azure AI 自訂視覺服務的工作。",
     "examTip": "區分通用服務和自訂服務：Azure AI 視覺提供「預訓練好的」通用能力；Azure AI 自訂視覺讓您用「自己的資料訓練」專屬模型。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 195,
@@ -3586,34 +3606,36 @@ const QUESTIONS_DATA = [
   {
     "id": 198,
     "category": "outline-3",
-    "type": "single",
-    "question": "在下列哪兩種情況中可以使用 Azure AI 文件智慧服務？每個正確答案都是一個完整的解決方案。",
+    "type": "multi",
+    "question": "在下列哪兩種情況中可以使用 Azure AI 文件智慧服務？每個正確答案都是一個完整的解決方案。(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 從發票中擷取發票號碼",
-      "2. 根據收據辨識零售商",
-      "3. 在目錄中尋找產品影像",
-      "4. 將表格從法文翻譯成英文"
+      "A. 從發票中擷取發票號碼",
+      "B. 在目錄中尋找產品影像",
+      "C. 根據收據辨識零售商",
+      "D. 將表格從法文翻譯成英文"
     ],
     "subQuestions": null,
-    "answer": "1, 2",
-    "rationale": "Azure AI 文件智慧服務 (Document Intelligence) 專門用於從文件和表單中提取文字、鍵值對和表格結構。 1 & 2: 從發票或收據中提取特定欄位（如發票號碼、零售商名稱）是文件智慧服務的預建模型（如發票模型、收據模型）的核心功能。 選項 3 是影像搜尋或物件偵測的任務。選項 4 是翻譯任務，應使用翻譯工具服務。",
+    "answer": "從發票中擷取發票號碼、根據收據辨識零售商",
+    "rationale": "Azure AI 文件智慧服務 (Document Intelligence) 專門用於從文件和表單中提取文字、鍵值對和表格結構。A. 從發票中提取發票號碼是文件智慧服務發票模型的核心功能。C. 從收據中辨識零售商是文件智慧服務收據模型的核心功能。B: 在目錄中尋找產品影像是影像搜尋或物件偵測的任務。D: 翻譯表格應使用翻譯工具服務。",
     "examTip": "看到「發票」、「收據」、「表單」、「W-2稅單」等標準化文件處理，就要想到文件智慧服務。",
-    "source": 2
+    "source": 2,
+    "correctAnswers": ["A", "C"]
   },
   {
     "id": 199,
     "category": "outline-3",
-    "type": "single",
-    "question": "使用電腦視覺可執行下列哪兩項工作？每個正確答案都是一個完整的解決方案。",
+    "type": "multi",
+    "question": "使用電腦視覺可執行下列哪兩項工作？每個正確答案都是一個完整的解決方案。(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "1. 偵測影像中的色彩配置。",
-      "2. 將文字翻譯為不同語言。",
-      "3. 擷取關鍵詞組。",
-      "4. 預測股票價格。",
-      "5. 偵測影像中的商標。"
+      "A. 偵測影像中的色彩配置。",
+      "B. 擷取關鍵詞組。",
+      "C. 偵測影像中的商標。",
+      "D. 將文字翻譯為不同語言。",
+      "E. 預測股票價格。"
     ],
     "subQuestions": null,
-    "answer": "1, 5",
+    "answer": "偵測影像中的色彩配置、偵測影像中的商標",
+    "correctAnswers": ["A", "C"],
     "rationale": "Azure AI 視覺的影像分析功能非常豐富，其中包括： 1. 色彩配置偵測：可以識別影像的主要色彩和輔助色彩。 5. 品牌偵測：可以從影像中識別出數千個全球知名品牌的商標。 選項 2 是翻譯任務，選項 3 是 NLP 任務，選項 4 是機器學習的迴歸任務。",
     "examTip": "除了物件偵測、OCR 等，也要了解電腦視覺還包含色彩分析、品牌偵測、影像類型判斷（如線條畫）等細分功能。",
     "source": 2
@@ -4285,19 +4307,19 @@ const QUESTIONS_DATA = [
     "options": null,
     "subQuestions": [
       {
-        "text": "標記",
+        "text": "標記 (Labeling) 是使用已知值標註訓練資料的過程。",
         "answer": "是"
       },
       {
-        "text": "您應該使用訓練模型",
+        "text": "您應該使用訓練模型所用的相同資料來評估模型。",
         "answer": "否"
       },
       {
-        "text": "精確度 (Precision",
+        "text": "精確度 (Precision) 一律為用以衡量模型性能的主要計量。",
         "answer": "否"
       }
     ],
-    "answer": "1. 是 - 標記是使用已知值標註訓練資料的過程。 2. 否 - 您應該使用訓練模型所用的相同資料來評估模型。 3. 否 - 精確度 (Precision) 一律為用以衡量模型性能的主要計量。",
+    "answer": "1. 是2. 否3. 否",
     "rationale": "第一句：在監督式學習中，標記 (labeling) 指的是為訓練資料的每個樣本提供已知的輸出值或目標變數。模型將從這些帶有標籤的資料中學習。因此，敘述為「是」。 第二句：評估模型時，應該使用模型在訓練過程中未見過的資料（通常稱為測試資料集或驗證資料集）。如果使用訓練資料來評估，模型可能會因為過度擬合 (overfitting) 而表現出虛高的性能，無法真實反映其對新資料的泛化能力。因此，敘述為「否」。 第三句：精確度 (Precision) 是評估分類模型的指標之一，但並非一律是主要計量。主要計量的選擇取決於具體的業務問題和場景。例如，在某些情況下，召回率 (Recall)、F1-score、準確度 (Accuracy) 或 AUC 可能更重要。對於迴歸模型，則會使用如 RMSE、MAE 等指標。因此，敘述為「否」。",
     "examTip": "機器學習核心概念： 訓練資料 vs. 測試資料：務必分開，用測試資料評估模型泛化能力。 評估指標：沒有一體適用的最佳指標，需根據問題類型（分類、迴歸）和業務需求選擇。",
     "source": 3
@@ -4322,7 +4344,7 @@ const QUESTIONS_DATA = [
   {
     "id": 240,
     "category": "outline-4",
-    "type": "single",
+    "type": "multi",
     "question": "您有一個文件目錄。 您需要製作一套解決方案來根據這些檔回答使用者問題。此解決方案必須將開發工作量降至最低。 您應該執行哪兩動作？每個正確答案都是一個部分的解決方案。 注意：每答對一個選項，可得一分。",
     "options": [
       "A. 使用 QnA Maker 擷取文件並建立知識庫。",
@@ -4331,7 +4353,8 @@ const QUESTIONS_DATA = [
       "D. 使用文字分析擷取檔並建立知識庫。"
     ],
     "subQuestions": null,
-    "answer": "A 和 C A. 使用 QnA Maker 擷取文件並建立知識庫。 C. 在 QnA Maker 入口網站中，建置機器人。",
+    "answer": "使用 QnA Maker 擷取文件並建立知識庫、在 QnA Maker 入口網站中，建置機器人",
+    "correctAnswers": ["A", "C"],
     "rationale": "QnA Maker（現已整合至 Azure AI Language 的自訂問題解答功能）專為從現有內容（如 FAQ 文件、手冊、文件）建立知識庫並快速建置問答機器人而設計，能將開發工作量降至最低。 A. QnA Maker 的核心功能之一就是從各種來源擷取資訊（包括文件目錄中的文件）來自動產生問答配對，從而建立知識庫。 C. QnA Maker 入口網站（或 Language Studio）提供了直接從已發佈的知識庫建立和測試機器人的功能，簡化了部署過程。 B. 雖然最終目標是部署機器人，但「使用知識庫部署機器人」描述的是結果而非動作，且選項 C 更具體地指出了在何處執行此操作以降低工作量。 D. 文字分析服務（現為 Azure AI Language 的一部分）提供如關鍵片語提取、情感分析等功能，但它本身不直接用於建立問答知識庫；QnA Maker 才是專为此設計的。",
     "examTip": "當題目提到需要從現有文件快速建立問答系統或機器人，並且強調降低開發工作量時，QnA Maker（或自訂問題解答）通常是正確的解決方案。",
     "source": 3
@@ -4361,19 +4384,19 @@ const QUESTIONS_DATA = [
     "options": null,
     "subQuestions": [
       {
-        "text": "餐廳可以透過 Cortana",
+        "text": "餐廳可以透過 Cortana 使用聊天機器人回答客戶查詢。",
         "answer": "是"
       },
       {
-        "text": "餐廳可以利用聊天機器人",
+        "text": "餐廳可以利用聊天機器人在網頁上回答有關營業時間的查詢。",
         "answer": "是"
       },
       {
-        "text": "餐廳可以利用聊天機器人",
+        "text": "餐廳可以利用聊天機器人自動回應外部網站上的客戶評論。",
         "answer": "否"
       }
     ],
-    "answer": "1. 是 - 餐廳可以透過 Cortana 使用聊天機器人回答查詢。 2. 是 - 餐廳可以利用聊天機器人在網頁上回答有關營業時間的查詢。 3. 否 - 餐廳可以利用聊天機器人自動回應外部網站上客戶評論。",
+    "answer": "1. 是2. 是3. 否",
     "rationale": "第一句：聊天機器人可以整合到多種通道 (channels)，包括語音助理如 Cortana。因此，餐廳可以開發一個聊天機器人技能，讓使用者透過 Cortana 查詢餐廳資訊。敘述為「是」。 第二句：在網頁上提供聊天機器人以回答常見問題（如營業時間）是非常普遍的應用。敘述為「是」。 第三句：雖然聊天機器人可以處理文字，但自動回應外部網站（如評論網站、社交媒體）上的客戶評論，通常需要更複雜的整合、情感分析、以及可能的人工審核流程，而不僅僅是標準的問答聊天機器人功能。直接用聊天機器人自動在外部網站上「回應」評論，可能存在風險和技術挑戰，通常不是其主要設計用途。敘述為「否」。",
     "examTip": "聊天機器人的核心是提供互動式服務。思考每個場景是否符合這種互動模式，以及技術上是否為聊天機器人的典型應用範圍。",
     "source": 3
@@ -4572,19 +4595,19 @@ const QUESTIONS_DATA = [
     "options": null,
     "subQuestions": [
       {
-        "text": "您可以使用自己的資料微調 Azure OpenAI",
+        "text": "您可以使用自己的資料微調 Azure OpenAI 模型。",
         "answer": "是"
       },
       {
-        "text": "預先訓練的生成式 AI",
+        "text": "預先訓練的生成式 AI 模型是 Azure OpenAI 的元件。",
         "answer": "是"
       },
       {
-        "text": "若要建置符合 Microsoft 負責任 AI",
+        "text": "若要建置符合 Microsoft 負責任 AI 準則的解決方案，您必須建置和訓練自己的模型。",
         "answer": "否"
       }
     ],
-    "answer": "1. 是 - 您可以使用自己的資料微調 Azure OpenAI 模型。 2. 是 - 預先訓練的生成式 AI 模型是 Azure OpenAI 的元件。 3. 否 - 若要建置符合 Microsoft 負責任 AI 準則的解決方案，您必須建置和訓練自己的模型。",
+    "answer": "1. 是2. 是3. 否",
     "rationale": "第一句：Azure OpenAI 服務支援使用自己的資料對基礎模型進行微調 (fine-tuning)，以使其更適應特定領域或任務。因此，敘述為「是」。(注意: PDF 第28頁的螢幕截圖將此題標為「否」，但這是對該服務功能的誤解，微調是 Azure OpenAI 的核心功能之一。) 第二句：Azure OpenAI 服務的核心就是提供對 OpenAI 強大預先訓練的大型語言模型（如 GPT-4, GPT-3.5-Turbo, Embeddings, DALL-E）的存取。這些模型是服務的基礎元件。因此，敘述為「是」。 第三句：Microsoft 負責任 AI 準則適用於所有 AI 應用，無論是使用預先訓練的模型（如 Azure OpenAI）還是自己建置訓練的模型。使用預先訓練的模型並不意味著不符合負責任 AI 準則，開發人員仍需在使用這些模型時考慮並實施相應的原則（例如內容過濾、監控、透明度說明等）。因此，敘述為「否」。",
     "examTip": "了解 Azure OpenAI 服務的關鍵特性：提供預先訓練的強大模型、支援微調、內建負責任 AI 功能（如內容過濾）。同時，要理解負責任 AI 原則是普適的，適用於所有類型的 AI 開發。",
     "source": 3
@@ -5384,7 +5407,7 @@ const QUESTIONS_DATA = [
   {
     "id": 298,
     "category": "outline-1",
-    "type": "single",
+    "type": "multi",
     "question": "Microsoft 責任 AI 的指導原則是哪三項？每個正確答案都是一種完整的解決方案。 注意：每答對一個選項，可得一分。",
     "options": [
       "A. 固執性",
@@ -5395,10 +5418,11 @@ const QUESTIONS_DATA = [
       "F. 可靠性和安全性 (Reliability and Safety)"
     ],
     "subQuestions": null,
-    "answer": "D, E, F D. 公平性 (Fairness) E. 包容性 (Inclusiveness) F. 可靠性和安全性 (Reliability and Safety)",
-    "rationale": "Microsoft 負責任 AI 的六大指導原則是： 公平性 (Fairness) 可靠性與安全性 (Reliability and Safety) 隱私權與安全性 (Privacy and Security) 包容性 (Inclusiveness) 透明度 (Transparency) 權責 (Accountability) 選項 A, B, C (固執性、知識性、決斷性) 並非 Microsoft 負責任 AI 的指導原則。",
+    "answer": "公平性 (Fairness)、包容性 (Inclusiveness)、可靠性和安全性 (Reliability and Safety)",
+    "rationale": "Microsoft 負責任 AI 的六大指導原則是：公平性 (Fairness)、可靠性與安全性 (Reliability and Safety)、隱私權與安全性 (Privacy and Security)、包容性 (Inclusiveness)、透明度 (Transparency)、權責 (Accountability)。選項 A, B, C (固執性、知識性、決斷性) 並非 Microsoft 負責任 AI 的指導原則。",
     "examTip": "請務必熟記這六大原則，考試中經常會以不同形式出現，要求您識別哪些是或不是其指導原則。",
-    "source": 3
+    "source": 3,
+    "correctAnswers": ["D", "E", "F"]
   },
   {
     "id": 299,
@@ -6761,7 +6785,7 @@ const QUESTIONS_DATA = [
   {
     "id": 373,
     "category": "outline-2",
-    "type": "single",
+    "type": "multi",
     "question": "您可以將哪兩個元件拖曳至 Azure Machine Learning 設計工具的畫布？ 每個正確答案都是一個完整的解決方案。 注意：每答對一個選項，可得一分。",
     "options": [
       "A. 模組 (Module)",
@@ -6770,7 +6794,8 @@ const QUESTIONS_DATA = [
       "D. 資料集 (Dataset)"
     ],
     "subQuestions": null,
-    "answer": "A 和 D A. 模組 (Module) D. 資料集 (Dataset)",
+    "answer": "模組 (Module)、資料集 (Dataset)",
+    "correctAnswers": ["A", "D"],
     "rationale": "Azure Machine Learning 設計工具提供了一個視覺化的畫布，使用者可以從資產庫中將以下主要類型的項目拖曳到畫布上來建置機器學習管線： 資料集 (Datasets)： 代表用於訓練或評分模型的資料。 模組 (Modules) / 元件 (Components)： 代表執行特定機器學習任務的演算法或資料處理操作（例如資料轉換、模型訓練、模型評分等）。 「計算」是在執行管線時選擇的計算目標，而不是直接拖曳到畫布上的項目。「管線」是畫布上模組和資料集連接後形成的整體流程。",
     "examTip": "在設計工具中，您主要是透過拖放資料集和功能模組/元件，並將它們連接起來，以定義資料流和機器學習處理步驟。",
     "source": 3
