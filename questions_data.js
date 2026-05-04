@@ -4091,15 +4091,15 @@ const QUESTIONS_DATA = [
     "id": 226,
     "category": "outline-1",
     "type": "single",
-    "question": "請將 AI 工作負載與其適用的工作配對。 說明：作答時，請將左側每個工作負載拖曳至右側的工作需求。每個工作負載會正確配對一項工作，每項工作負載僅可使用一次，完全配對才得分。 AI 工作負載 A. Azure AI 文件智慧擷取服務 B. 電腦視覺 C. 生成式 AI D. 知識探索 作答配對說明 擷取檔案格式及欄位資料 辨識來自多種檔案格式之圖像及可視資料的資訊 傳回撰寫完整段落文字的回應 擷取與主題最相關的資料",
+    "question": "請將 AI 工作負載與其適用的工作配對。 AI 工作負載：A. Azure AI 文件智慧擷取服務　B. 電腦視覺　C. 生成式 AI　D. 知識探索。 工作需求：1. 擷取檔案格式及欄位資料　2. 辨識來自多種檔案格式之圖像及可視資料的資訊　3. 傳回撰寫完整段落文字的回應　4. 擷取與主題最相關的資料。 以下哪個配對完全正確？",
     "options": [
-      "A. 1. - 擷取檔案格式及欄位資料(A. Azure AI 文件智慧擷取服務) 2. - 辨識來自多種檔案格式之圖像及可視資料的資訊(B. 電腦視覺) 3. - 傳回撰寫完整段落文字的回應(C. 生成式 AI) 4. - 擷取與主題最相關的資料(D. 知識探索)",
-      "B. 影像分類 (Image Classification)",
-      "C. Azure AI 臉部服務 (Face Service)",
-      "D. Azure OpenAI Service"
+      "A. 1→文件智慧, 2→電腦視覺, 3→生成式AI, 4→知識探索",
+      "B. 1→電腦視覺, 2→文件智慧, 3→知識探索, 4→生成式AI",
+      "C. 1→生成式AI, 2→知識探索, 3→文件智慧, 4→電腦視覺",
+      "D. 1→知識探索, 2→生成式AI, 3→電腦視覺, 4→文件智慧"
     ],
     "subQuestions": null,
-    "answer": "A. 1. - 擷取檔案格式及欄位資料(A. Azure AI 文件智慧擷取服務) 2. - 辨識來自多種檔案格式之圖像及可視資料的資訊(B. 電腦視覺) 3. - 傳回撰寫完整段落文字的回應(C. 生成式 AI) 4. - 擷取與主題最相關的資料(D. 知識探索)",
+    "answer": "A. 1→文件智慧, 2→電腦視覺, 3→生成式AI, 4→知識探索",
     "rationale": "各 AI 工作負載的核心功能： Azure AI 文件智慧擷取服務：專門從文件中擷取結構化資料，如表單欄位、表格等 電腦視覺：分析和理解影像內容，識別物件、文字、場景等 生成式 AI：根據提示生成新內容，如文字、程式碼等 知識探索：從大量資料中搜尋和擷取相關資訊",
     "examTip": "記住各 AI 服務的核心用途：文件智慧→結構化擷取，電腦視覺→影像分析，生成式AI→內容創建，知識探索→資訊檢索。",
     "source": 3
@@ -4108,15 +4108,15 @@ const QUESTIONS_DATA = [
     "id": 227,
     "category": "outline-3",
     "type": "single",
-    "question": "請將臉部辨識工作與正確的問題配對。 作答時，請將左側資料行所列的適當工作負載類型，拖曳至右側對應的案例。 每種工作負載類型可能只使用一或多次，甚至完全用不到。 注意：每答對一個選項，可得一分。 工作負載 (Workload) A. 識別 (Identify) B. 相似度 (Find Similar) C. 驗證 (Verify) 問題描述 (Description) 兩張臉部相片是同一個人嗎？ 這個人看起來像其他人嗎？ 這群人中的這個人是誰？",
+    "question": "請將臉部辨識工作與正確的問題配對。 工作負載：A. 識別 (Identify)　B. 相似度 (Find Similar)　C. 驗證 (Verify)。 問題描述：1. 兩張臉部相片是同一個人嗎？　2. 這個人看起來像其他人嗎？　3. 這群人中的這個人是誰？。 以下哪個配對完全正確？",
     "options": [
-      "A. 1. - 兩張臉部相片是同一個人嗎？(C. 驗證 Verify) 2. - 這個人看起來像其他人嗎？(B. 相似度 Find Similar) 3. - 這群人中的這個人是誰？(A. 識別 Identify)",
-      "B. 臉部識別 (Face Identification)",
-      "C. 語意分割 (Semantic Segmentation)",
-      "D. 影像分類 (Image Classification)"
+      "A. 1→驗證(Verify), 2→相似度(Find Similar), 3→識別(Identify)",
+      "B. 1→識別(Identify), 2→驗證(Verify), 3→相似度(Find Similar)",
+      "C. 1→相似度(Find Similar), 2→識別(Identify), 3→驗證(Verify)",
+      "D. 1→驗證(Verify), 2→識別(Identify), 3→相似度(Find Similar)"
     ],
     "subQuestions": null,
-    "answer": "A. 1. - 兩張臉部相片是同一個人嗎？(C. 驗證 Verify) 2. - 這個人看起來像其他人嗎？(B. 相似度 Find Similar) 3. - 這群人中的這個人是誰？(A. 識別 Identify)",
+    "answer": "A. 1→驗證(Verify), 2→相似度(Find Similar), 3→識別(Identify)",
     "rationale": "Azure AI 臉部服務提供多種臉部辨識相關功能： 驗證 (Verify)：判斷兩張臉部是否屬於同一個人。這是一種一對一的比對。適用於問題「兩張臉部相片是同一個人嗎？」。 相似度 (Find Similar)：在一組臉部中，尋找與目標臉部相似的其他臉部。適用於問題「這個人看起來像其他人嗎？」。 識別 (Identify)：在一組已知的人員群組中，辨識出影像中的某個臉部是誰。這是一種一對多的比對。適用於問題「這群人中的這個人是誰？」。",
     "examTip": "理解臉部服務中「驗證」、「相似度」和「識別」的核心差異： 驗證 (Verify) = 是不是同一個人？(1:1) 相似度 (Find Similar) = 哪些臉長得像？(1:N，從臉找臉) 識別 (Identify) = 這個臉是誰？(1:N，從臉找已註冊的人)",
     "source": 3
@@ -4158,8 +4158,8 @@ const QUESTIONS_DATA = [
         "answer": "否"
       }
     ],
-    "answer": "1. 是 - 會回答諸如「我的下一場約會是何時?」等問題的家用智慧型裝置為交談式 AI (Conversational AI) 的範例。 2. 是 - 公司網站上的互動式網路聊天功能可以使用 Azure Bot Service 實作。 3. 否 - 為預先錄製影片自動產生字幕是交談式 AI 的範例。",
-    "rationale": "第一句：家用智慧型裝置（如智慧音箱）能理解並回應使用者的語音指令或問題，進行互動式對話，這是交談式 AI 的典型應用。因此，敘述為「是」。 第二句：Azure Bot Service 是一個用於建置、測試、部署和管理智慧型機器人的平台。這些機器人可以透過多種管道（包括網站聊天）與使用者互動。因此，敘述為「是」。 第三句：為預先錄製影片自動產生字幕主要是語音轉換文字 (STT) 的功能，屬於Azure AI 語音服務的範疇，是自然語言處理 (NLP) 的一部分。雖然交談式 AI 也使用 NLP 和語音服務，但自動字幕本身並不構成互動式對話。因此，敘述為「否」。",
+    "answer": "1. 是 - 會回答諸如「我的下一場約會是何時?」等問題的家用智慧型裝置為交談式 AI (Conversational AI) 的範例。 2. 是 - 公司網站上的互動式網路聊天功能可以使用 Azure Bot Service 實作。 3. 否 - 為預先錄製影片自動產生字幕並非交談式 AI 的範例。",
+    "rationale": "第一句：家用智慧型裝置（如智慧音箱）能理解並回應使用者的語音指令或問題，進行互動式對話，這是交談式 AI 的典型應用。因此，敘述為「是」。 第二句：Azure Bot Service 是一個用於建置、測試、部署和管理智慧型機器人的平台。這些機器人可以透過多種管道（包括網站聊天）與使用者互動。因此，敘述為「是」。 第三句：為預先錄製影片自動產生字幕主要是語音轉換文字 (STT) 的功能，屬於 Azure AI 語音服務的範疇，是自然語言處理 (NLP) 的一部分。自動字幕是單向批次處理，並不涉及雙向互動對話，因此不屬於交談式 AI 的範例。敘述為「否」。",
     "examTip": "交談式 AI 的核心是模擬人類對話，進行雙向互動。聊天機器人、虛擬助理是常見例子。而單向的任務，如語音轉文字（字幕）、文字轉語音，雖然是相關技術，但本身不代表完整的交談式 AI。",
     "source": 3
   },
@@ -4201,15 +4201,15 @@ const QUESTIONS_DATA = [
     "id": 232,
     "category": "outline-2",
     "type": "single",
-    "question": "將機器學習類型與適當的案例配對。 作答時，請將左側資料行所列機器學習類型，拖曳至右側對應的案例中。 每種機器學習類型可能只使用一或多次，甚至完全用不到。 注意：每答對一個選項，可得一分。 機器學習類型 (Machine Learning Type) A. 迴歸 (Regression) B. 叢集 (Clustering) C. 分類 (Classification) 案例描述 (Scenario Description) 根據機場降雪量預測航班延誤時分數 將客戶劃分為不同群組以支援行銷部門 預測學生是否能完成大學課程",
+    "question": "將機器學習類型與適當的案例配對。 機器學習類型：A. 迴歸 (Regression)　B. 叢集 (Clustering)　C. 分類 (Classification)。 案例描述：1. 根據機場降雪量預測航班延誤時分數　2. 將客戶劃分為不同群組以支援行銷部門　3. 預測學生是否能完成大學課程。 以下哪個配對完全正確？",
     "options": [
-      "A. 強化學習",
-      "B. 1. - 根據機場降雪量預測航班延誤時分數 (A. 迴歸 Regression) 2. - 將客戶劃分為不同群組以支援行銷部門 (B. 叢集 Clustering) 3. - 預測學生是否能完成大學課程 (C. 分類 Classification)",
-      "C. 監督式學習",
-      "D. 非監督式學習"
+      "A. 1→迴歸, 2→叢集, 3→分類",
+      "B. 1→分類, 2→迴歸, 3→叢集",
+      "C. 1→叢集, 2→分類, 3→迴歸",
+      "D. 1→迴歸, 2→分類, 3→叢集"
     ],
     "subQuestions": null,
-    "answer": "B. 1. - 根據機場降雪量預測航班延誤時分數 (A. 迴歸 Regression) 2. - 將客戶劃分為不同群組以支援行銷部門 (B. 叢集 Clustering) 3. - 預測學生是否能完成大學課程 (C. 分類 Classification)",
+    "answer": "A. 1→迴歸, 2→叢集, 3→分類",
     "rationale": "迴歸 (Regression)：用於預測連續數值。航班延誤的「時分數」是一個數值（例如 30 分鐘、65.5 分鐘），因此屬於迴歸問題。 叢集 (Clustering)：用於將資料點分組，使得同一組內的資料點相似度較高，不同組之間的相似度較低，通常在沒有預先定義標籤的情況下使用。將客戶劃分為不同群組（例如高價值客戶、潛在流失客戶）是典型的叢集應用。 分類 (Classification)：用於預測項目屬於哪個預先定義的類別。預測學生「是否」能完成大學課程（例如「是」或「否」兩個類別，或者「完成」、「未完成」、「可能延畢」等多個類別）是分類問題。",
     "examTip": "區分三種主要機器學習類型： 預測一個數值 -> 迴歸 (例如：價格、溫度、數量) 預測一個類別或標籤 -> 分類 (例如：是/否、貓/狗、垃圾郵件/非垃圾郵件) 將資料分群 -> 叢集 (例如：客戶分群、文件主題分組)",
     "source": 3
@@ -4235,7 +4235,7 @@ const QUESTIONS_DATA = [
     "id": 234,
     "category": "outline-2",
     "type": "single",
-    "question": "請選取可正確完成句子的答案。 在指定日期預測將有多少車輛會通過橋樑，為下列何者的範例： 迴歸 (Regression)",
+    "question": "請選取可正確完成句子的答案。 在指定日期預測將有多少車輛會通過橋樑，為下列何者的範例？",
     "options": [
       "A. 迴歸 (Regression)",
       "B. 分類",
@@ -4252,7 +4252,7 @@ const QUESTIONS_DATA = [
     "id": 235,
     "category": "outline-4",
     "type": "single",
-    "question": "請選取可正確完成句子的答案。 建立錄音的文字記錄是下列何者的範例： 自然語言處理 (NLP)...",
+    "question": "請選取可正確完成句子的答案。 建立錄音的文字記錄是下列何者的範例？",
     "options": [
       "A. 對話式語言理解 (CLU)",
       "B. 機器翻譯 (Machine Translation)",
@@ -4269,7 +4269,7 @@ const QUESTIONS_DATA = [
     "id": 236,
     "category": "outline-3",
     "type": "single",
-    "question": "請選取可正確完成句子的答案。 傳回指出影像中車輛位置的定界框 (bounding box) 為下列範例之一： 物件偵測 (Object Detection)",
+    "question": "請選取可正確完成句子的答案。 傳回指出影像中車輛位置的定界框 (bounding box) 為下列何者的範例？",
     "options": [
       "A. 影像分類",
       "B. 物件偵測 (Object Detection)",
@@ -4286,7 +4286,7 @@ const QUESTIONS_DATA = [
     "id": 237,
     "category": "outline-2",
     "type": "single",
-    "question": "請選取可正確完成句子的答案。 建置 K-Means 叢集模型時，所有特徵的資料類型都必須是 數值。",
+    "question": "請選取可正確完成句子的答案。 建置 K-Means 叢集模型時，所有特徵的資料類型都必須是？",
     "options": [
       "A. 數值",
       "B. 類別",
@@ -4328,7 +4328,7 @@ const QUESTIONS_DATA = [
     "id": 239,
     "category": "outline-2",
     "type": "single",
-    "question": "若要補充語句，請在答案區域中選擇相應的選項。 Azure Machine Learning 設計工具可讓您建立機器學習模型，藉由 在視覺效果畫布新增元件",
+    "question": "若要補充語句，請在答案區域中選擇相應的選項。 Azure Machine Learning 設計工具可讓您建立機器學習模型，藉由哪種方式？",
     "options": [
       "A. 端點 (Endpoint)",
       "B. 隨機森林 (Random Forest)",
@@ -4439,15 +4439,15 @@ const QUESTIONS_DATA = [
     "id": 245,
     "category": "outline-2",
     "type": "single",
-    "question": "請將工具與 Azure Machine Learning 工作配對。 作答時，請將左側資料行所列的適當工具，拖曳至右側對應的工作。每種工具可能只使用一次，也可能使用多次，甚至完全用不到。 注意：每答對一個選項，可得一分。 工具 (Tool) A. Azure 入口網站 (Azure portal) B. Machine Learning 設計工具 (Designer) C. 自動化機器學習 (Automated ML) 工作 (Task) 建立 Machine Learning 工作區 (Workspace) 使用專用的拖放功能介面來定型及部署模型 使用精靈來選取機器學習執行設定",
+    "question": "請將工具與 Azure Machine Learning 工作配對。 工具：A. Azure 入口網站　B. Machine Learning 設計工具　C. 自動化機器學習 (Automated ML)。 工作：1. 建立 Machine Learning 工作區　2. 使用專用的拖放功能介面來定型及部署模型　3. 使用精靈來選取機器學習執行設定。 以下哪個配對完全正確？",
     "options": [
-      "A. Azure Machine Learning Designer",
-      "B. Azure Notebooks",
-      "C. 1. - 建立 Machine Learning 工作區 (Workspace) (A. Azure 入口網站) 2. - 使用專用的拖放功能介面來定型及部署模型 (B. Machine Learning 設計工具) 3. - 使用精靈來選取機器學習執行設定 (C. 自動化機器學習)",
-      "D. Azure ML SDK"
+      "A. 1→Azure入口網站, 2→設計工具, 3→自動化ML",
+      "B. 1→設計工具, 2→自動化ML, 3→Azure入口網站",
+      "C. 1→自動化ML, 2→Azure入口網站, 3→設計工具",
+      "D. 1→Azure入口網站, 2→自動化ML, 3→設計工具"
     ],
     "subQuestions": null,
-    "answer": "C. 1. - 建立 Machine Learning 工作區 (Workspace) (A. Azure 入口網站) 2. - 使用專用的拖放功能介面來定型及部署模型 (B. Machine Learning 設計工具) 3. - 使用精靈來選取機器學習執行設定 (C. 自動化機器學習)",
+    "answer": "A. 1→Azure入口網站, 2→設計工具, 3→自動化ML",
     "rationale": "建立 Machine Learning 工作區：Azure Machine Learning 工作區是 Azure 中的頂層資源，通常透過Azure 入口網站建立和管理，也可以使用 SDK 或 CLI。 使用專用的拖放功能介面來定型及部署模型：這描述的是 Azure Machine Learning 設計工具 (Designer)，它提供視覺化的拖放式畫布來建置機器學習管線。 使用精靈來選取機器學習執行設定：這描述的是自動化機器學習 (Automated ML) 的使用者介面，它提供了一個引導式精靈，讓使用者設定機器學習任務、選取資料、並自動嘗試多種演算法和超參數來找到最佳模型。",
     "examTip": "了解 Azure Machine Learning 中不同工具的用途： Azure 入口網站：用於管理 Azure 資源，包括建立工作區。 Machine Learning 設計工具：視覺化拖放建置模型。 自動化機器學習：自動化模型選擇和超參數調整，通常有精靈介面。 Notebooks / SDK：程式碼優先的方法。",
     "source": 3
@@ -4473,7 +4473,7 @@ const QUESTIONS_DATA = [
     "id": 247,
     "category": "outline-1",
     "type": "single",
-    "question": "請選取可正確完成句子的答案。 GitHub Copilot 延伸模組（適用於 Microsoft Visual Studio Code）會使用 OpenAI Codex 模型。",
+    "question": "請選取可正確完成句子的答案。 GitHub Copilot 延伸模組（適用於 Microsoft Visual Studio Code）會使用哪個模型？",
     "options": [
       "A. DALL-E",
       "B. Whisper",
@@ -4490,15 +4490,15 @@ const QUESTIONS_DATA = [
     "id": 248,
     "category": "outline-2",
     "type": "single",
-    "question": "請將機器學習工作與適當的案例配對。 作答時，請將左側資料行所列的適當工作，拖曳至右側對應的案例。每項工作可能只使用一次，也可能使用多次，甚至完全用不到。 注意：每答對一個選項，可得一分。 工作 (Task) A. 模型評估 (Model Evaluation) B. 特徵工程 (Feature Engineering) C. 特徵選取 (Feature Selection) 案例描述 (Scenario Description) 檢查混淆矩陣的值 將日期分割成 [年]、[月] 和 [日] 欄位 挑選訓練氣候模型的溫度和壓力",
+    "question": "請將機器學習工作與適當的案例配對。 工作：A. 模型評估 (Model Evaluation)　B. 特徵工程 (Feature Engineering)　C. 特徵選取 (Feature Selection)。 案例描述：1. 檢查混淆矩陣的值　2. 將日期分割成 [年]、[月] 和 [日] 欄位　3. 挑選訓練氣候模型的溫度和壓力。 以下哪個配對完全正確？",
     "options": [
-      "A. 準確度",
-      "B. 1. - 檢查混淆矩陣的值 (A. 模型評估) 2. - 將日期分割成 [年]、[月] 和 [日] 欄位 (B. 特徵工程) 3. - 挑選訓練氣候模型的溫度和壓力 (C. 特徵選取)",
-      "C. 精確度",
-      "D. 召回率"
+      "A. 1→模型評估, 2→特徵工程, 3→特徵選取",
+      "B. 1→特徵工程, 2→特徵選取, 3→模型評估",
+      "C. 1→特徵選取, 2→模型評估, 3→特徵工程",
+      "D. 1→模型評估, 2→特徵選取, 3→特徵工程"
     ],
     "subQuestions": null,
-    "answer": "B. 1. - 檢查混淆矩陣的值 (A. 模型評估) 2. - 將日期分割成 [年]、[月] 和 [日] 欄位 (B. 特徵工程) 3. - 挑選訓練氣候模型的溫度和壓力 (C. 特徵選取)",
+    "answer": "A. 1→模型評估, 2→特徵工程, 3→特徵選取",
     "rationale": "模型評估 (Model Evaluation)：在模型訓練完成後，使用測試資料和各種評估指標來衡量模型性能的過程。混淆矩陣 (Confusion Matrix) 是評估分類模型性能的常用工具，用於視覺化模型的預測結果（真陽性、假陽性、真陰性、假陰性）。因此，檢查混淆矩陣屬於模型評估。 特徵工程 (Feature Engineering)：指從現有原始資料中創建新的、更有用的特徵，或轉換現有特徵使其更適合模型學習的過程。將日期欄位（通常是單一字串或日期時間物件）拆分成代表年、月、日的獨立數值欄位，是一種常見的特徵工程技術，可以讓模型更容易捕捉時間相關的模式。 特徵選取 (Feature Selection)：指從所有可用的特徵中，選擇一個子集來用於模型訓練的過程。目的是移除不相關或冗餘的特徵，以提高模型性能、降低複雜性或縮短訓練時間。挑選溫度和壓力這兩個特定的特徵來訓練氣候模型，就是一個特徵選取的例子。",
     "examTip": "機器學習流程中的關鍵步驟： 特徵工程：創造或轉換特徵（無中生有或改變現有）。 特徵選取：挑選特徵（從現有中選擇子集）。 模型訓練：使用演算法學習資料模式。 模型評估：使用指標（如混淆矩陣、準確率、RMSE）衡量模型好壞。",
     "source": 3
@@ -4524,7 +4524,7 @@ const QUESTIONS_DATA = [
     "id": 250,
     "category": "outline-2",
     "type": "single",
-    "question": "請選取可正確完成句子的答案。 在機器學習模型中，當做輸入使用的資料稱為 特徵 (Feature)",
+    "question": "請選取可正確完成句子的答案。 在機器學習模型中，當做輸入使用的資料稱為？",
     "options": [
       "A. 特徵 (Feature)",
       "B. 標籤",
