@@ -893,19 +893,23 @@ const QUESTIONS_DATA = [
   {
     "id": 51,
     "category": "outline-3",
-    "type": "single",
-    "question": "使用 Azure AI 臉部服務時，您應該使用什麼來執行一對多或一對一臉部比對？",
+    "type": "multi",
+    "question": "使用 Azure AI 臉部服務時，您應該使用什麼來執行一對多或一對一臉部比對？(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "A. 活體偵測 (Liveness Detection)",
-      "B. 臉部屬性 (Face Attributes)",
-      "C. 臉部識別 (Face Identification)、臉部驗證 (Face Verification)",
-      "D. 語意分割 (Semantic Segmentation)"
+      "A. 臉部識別 (Face Identification)",
+      "B. 活體偵測 (Liveness Detection)",
+      "C. 臉部驗證 (Face Verification)",
+      "D. 臉部屬性 (Face Attributes)"
     ],
     "subQuestions": null,
-    "answer": "C. 臉部識別 (Face Identification)、臉部驗證 (Face Verification)",
-    "rationale": "Azure AI 臉部服務 提供：1) 臉部偵測（找出臉的位置）2) 臉部屬性（年齡、情緒、眼鏡、頭飾等）3) 臉部驗證（一對一比對）4) 臉部識別（一對多比對）。",
-    "examTip": "年齡/情緒偵測 = 臉部屬性；確認是否同一人 = 臉部驗證；從資料庫找人 = 臉部識別。",
-    "source": 1
+    "answer": "臉部識別 (Face Identification)、臉部驗證 (Face Verification)",
+    "rationale": "Azure AI 臉部服務 提供：1) 臉部偵測（找出臉的位置）2) 臉部屬性（年齡、情緒、眼鏡、頭飾等）3) 臉部驗證（一對一比對）4) 臉部識別（一對多比對）。一對多比對使用「臉部識別 (Face Identification)」，一對一比對使用「臉部驗證 (Face Verification)」。",
+    "examTip": "年齡/情緒偵測 = 臉部屬性；確認是否同一人 = 臉部驗證 (1:1)；從資料庫找人 = 臉部識別 (1:N)。",
+    "source": 1,
+    "correctAnswers": [
+      "A",
+      "C"
+    ]
   },
   {
     "id": 52,
@@ -1343,19 +1347,23 @@ const QUESTIONS_DATA = [
   {
     "id": 75,
     "category": "outline-4",
-    "type": "single",
-    "question": "對話式人工智慧 (AI) 解決方案的兩個主要組成部分是什麼？",
+    "type": "multi",
+    "question": "對話式人工智慧 (AI) 解決方案的兩個主要組成部分是什麼？(每個正確答案都代表解決方案的一部分)",
     "options": [
-      "A. 機器人服務 (Bot Service)、知識庫 (Knowledge Base)",
-      "B. Azure Video Indexer",
-      "C. Azure AI 異常偵測工具 (Anomaly Detector)",
-      "D. Azure AI 內容安全 (Content Safety)"
+      "A. 自然語言模型 (Natural Language Model)",
+      "B. 電腦視覺模型 (Computer Vision Model)",
+      "C. 知識庫 (Knowledge Base)",
+      "D. 機器學習管線 (Machine Learning Pipeline)"
     ],
     "subQuestions": null,
-    "answer": "A. 機器人服務 (Bot Service)、知識庫 (Knowledge Base)",
-    "rationale": "Azure AI Bot Service 是建立交談式 AI 的平台。機器人可連接多種通道 (Channels)：Teams、網頁聊天、Facebook、LINE 等。結合知識庫（如 QnA）可回答常見問題。Facebook 通道需要在該平台註冊應用程式。",
-    "examTip": "交談式 AI = Bot Service + 知識庫。記住：Facebook 通道需要額外註冊憑證。",
-    "source": 1
+    "answer": "自然語言模型 (Natural Language Model)、知識庫 (Knowledge Base)",
+    "rationale": "對話式 AI (Conversational AI) 解決方案的兩個核心組成部分是：1) 自然語言模型 (Natural Language Model)：負責理解使用者的輸入語言並產生適當的回應；2) 知識庫 (Knowledge Base)：儲存問答配對或相關知識，讓對話系統能夠提供準確的答案。Azure AI Bot Service 結合 Azure AI 語言服務（問答功能）即是典型架構。",
+    "examTip": "對話式 AI 的兩大核心：自然語言模型（理解語言）+ 知識庫（提供答案）。機器人服務 (Bot Service) 是整合平台，但核心組成是 NL 模型與知識庫。",
+    "source": 1,
+    "correctAnswers": [
+      "A",
+      "C"
+    ]
   },
   {
     "id": 76,
